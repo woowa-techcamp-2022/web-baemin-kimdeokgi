@@ -1,0 +1,45 @@
+p {
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center ;
+  width: 300px;
+  height: 500px;
+  border: 1px solid rgb(0, 255, 247);
+  padding: 1rem;
+}
+
+.btn-100 {
+  width: 100%;
+}
+
+.sub-title {
+  width: 100%;
+}
+
+.radio-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  margin: 0.5rem auto;
+}
+
+img {
+  width: 50px;
+}
+
+.text-sm {
+  font-size: 0.2rem;
+}
+
+.cancel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 1rem;
+  width: 15px;
+}
