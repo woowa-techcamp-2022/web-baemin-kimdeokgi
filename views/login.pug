@@ -1,0 +1,33 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/login.css')
+
+block content
+  div(class="container")
+
+    div(class="form-container")
+
+      input(id="id" type="text", name="id" placeholder="아이디 또는 이메일")
+      input(id="pw" type="password" name="pw" placeholder="비밀번호")
+      button(id="login" class="login btn-100" type="submit") 로그인
+      span(class="btn-finder-user-info")
+        a(id="btnFindId") 아이디 찾기 | 
+        a(id="btnFindPw")  비밀번호 찾기
+
+    div(class="social-login-container")
+      button(class="social-login-btn btn-100")
+        span
+        img(class="social-login-img" src="/images/facebook.png")
+        span 페이스북으로 로그인
+      button(class="social-login-btn btn-100")
+        span
+        img(class="social-login-img" src="/images/naver.png")
+        span 네이버로 로그인
+      button(class="social-login-btn btn-100")
+        span
+        img(class="social-login-img" src="/images/apple.png")
+        span Apple으로 로그인
+
+      p 혹시, 배달의민족이 처음이신가요?
+      a 회원가입
