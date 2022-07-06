@@ -1,0 +1,94 @@
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* p {
+  display: inline;
+} */
+
+nav {
+  height: 50px;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.container {
+  width: 500px;
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  /* border: 1px solid purple; */
+  width: 100%;
+  /* background-image: url('/images/banner.png'); */
+  object-fit: cover;
+
+}
+
+.loginContainer {
+  /* border: 1px solid gray; */
+  width: 100%;
+}
+
+.menuContainer {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+.campContainer {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  /* height: 50px; */
+  border-bottom: 1px solid gray;
+  
+}
+.menuContainer2 {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  /* height: 50px; */
+  border-bottom: 0.5px solid gray;
+}
+
+.image {
+  width: 100%;
+}
+
+.image-user {
+  margin: 0.5rem;
+  width: 10%;
+}
+
+.menu {
+  /* flex: 1 1 1 50%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid gray;
+  width: 33%;
+}
+
+.image-menu {
+  margin: 0.5rem;
+  width: 33%;
+}
+
+.image-root {
+  width: 8%;
+  margin: 0.5rem;
+}
