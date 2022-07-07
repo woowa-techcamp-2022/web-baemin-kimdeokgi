@@ -5,4 +5,4 @@ router.get('/', (req, res, next) => {
     res.render('authPhone');
 });
 
-export default router
+export default router;
