@@ -84,3 +84,12 @@ img {
 .sub-text {
   font-size: 0.5rem;
 }
+
+#refetchAuthNumber {
+  cursor: pointer;
+}
+
+#tmpAuthWrapper,
+#tmpAuthNumberTitle {
+  display: none;
+}
