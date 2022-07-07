@@ -81,3 +81,9 @@ img {
   padding: 0;
   font-size: 0.5rem;
 }
+
+.verify-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}

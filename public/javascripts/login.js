@@ -14,7 +14,6 @@ $loginForm.addEventListener('submit', (e) => {
     const id = document.querySelector('input[name=id]').value;
     const pw = document.querySelector('input[name=pw]').value;
     if (validationLoginInfo(id) && validationLoginInfo(pw)) {
-        console.log('로그인 성공');
         location.href = '/'
     } else {
         const $idErrorMessage = document.querySelector('#idErrorMessage');

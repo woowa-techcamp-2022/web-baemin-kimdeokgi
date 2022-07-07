@@ -1,4 +1,5 @@
 const $termAll = document.querySelector('#termAll');
+const $nextBtn = document.querySelector('#next');
 
 const validationTerms = () => {
   const term_agree_count = [1,2,3].filter(idx => document.querySelector(`#term${idx}`).checked).length;
@@ -26,6 +27,9 @@ $termsForm.addEventListener('change', e => {
   } else if ($el.name = 'termAll') {
     toggleAllterms()
   }
-  document.querySelector('#next').disabled = !validationTerms();
+  $nextBtn.disabled = !validationTerms();
 })
 
+$nextBtn.addEventListener('click', () => {
+  location.href = '/authPhone';
+})
