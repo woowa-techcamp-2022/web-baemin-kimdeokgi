@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center ;
+  width: 300px;
+  height: 500px;
+  border: 1px solid rgb(0, 255, 247);
+  padding: 1rem;
+}
+
+.form-container,
+.social-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 30%;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.btn-100 {
+  width: 100%;
+}
+
+.login {
+  background-color: green;
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+
+a,
+p {
+  font-size: 0.5rem;
+  display: inline-block;
+}
+
+.social-login-img {
+  height: 10px;
+  margin-right: 0.5rem;
+}
+
+.social-login-btn {
+  height: 5rem;
+  margin: 0.5rem auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.error-message {
+  height: 1rem;
+  color: red;
+  margin: 0.25rem;
+  padding: 0;
+  font-size: 0.5rem;
+}
+
+form {
+  width: 100%;
+}
+
+.signup {
+  cursor: pointer;
+}

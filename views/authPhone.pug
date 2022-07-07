@@ -1,0 +1,24 @@
+extends layout 
+
+block head 
+  link(rel="stylesheet", href="/stylesheets/authPhone.css")
+
+block content
+  div(class="container")
+    img(class="cancel" src="/images/arrow-left.svg")
+    button(class="next") 다음
+    h3(class="header") 회원가입
+
+    div(class="title") 휴대전화
+    div 
+      input(type="text" name="phone" maxlength=13)
+      img(src="/images/validation-green.png" class="check")
+      img(src="/images/cancel-circle.png" id="delete")
+    button(class="get-auth-number btn-100") 인증번호 받기
+
+    div(class="title") 인증번호
+    div(class="auth-wrapper")
+      input(class="auth-input" type="text" name="authNumber" placeholder="인증번호를 입력해주세요")
+      a(class="sub-text") 인증번호 다시받기
+
+  script(src="/javascripts/authPhone.js")

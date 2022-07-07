@@ -1,0 +1,54 @@
+extends layout 
+
+block head 
+  link(rel="stylesheet", href="/stylesheets/terms.css")
+
+block content 
+  img(class="cancel" src="/images/cancel.png")
+  div(class="container")
+    nav
+      span
+        span 회원가입
+    
+    div(class="sub-title") 
+      h3 어서오세요
+      h3 약관 동의가 필요해요
+
+    div(class="terms-cb" id='termsForm')
+      div(class="checkbox-wrapper")
+        input(type="checkbox", id="termAll" name="termAll")
+        label(for="termAll") 전체 동의
+      hr
+      div(class="checkbox-wrapper")
+        input(type="checkbox", id="term1" name="term")
+        label(for="term1") 배달의민족 이용약관 동의
+      div(class="checkbox-wrapper")
+        input(type="checkbox", id="term2" name="term")
+        label(for="term2") 전자금융거래 이용약관 동의
+      div(class="checkbox-wrapper")
+        input(type="checkbox", id="term3" name="term")
+        label(for="term3") 개인정보 수집이용 동의
+      div(class="checkbox-wrapper")
+        input(type="checkbox", id="term4" name="term")
+        label(for="term4") 개인정보 제3자 제공 동의 (선택)
+      div(class="checkbox-wrapper")
+        input(type="checkbox", id="term5" name="term")
+        label(for="term5") 마케팅 정보 메일, SMS 수신 동의 (선택)
+      hr
+      div(class="radio-wrapper")
+        input(type="radio", id="age1" name="age" checked)
+        label(for="age1") 만 14세 이상입니다.
+        img(src="/images/adult.png")
+      div(class="radio-wrapper")
+        input(type="radio", id="age2" name="age")
+        label(for="age2") 
+          span
+            p 만 14세 미만입니다.
+            p(class="text-sm") 본인확인이 된 보호자 배민 계정이 필요해요.
+        img(src="/images/child.png")
+
+    button(id="next" class="btn-100" type="button" disabled) 다음으로
+      
+      
+  script(src="/javascripts/terms.js") 
+
