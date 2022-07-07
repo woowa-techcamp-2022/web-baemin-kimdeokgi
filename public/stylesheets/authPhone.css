@@ -61,6 +61,13 @@ input:focus {
 
 img {
   width: 1rem;
+}
+
+.check {
+  filter: grayscale(100%)
+}
+
+#delete {
   cursor: pointer;
 }
 
@@ -76,4 +83,13 @@ img {
 
 .sub-text {
   font-size: 0.5rem;
+}
+
+#refetchAuthNumber {
+  cursor: pointer;
+}
+
+#tmpAuthWrapper,
+#tmpAuthNumberTitle {
+  display: none;
 }

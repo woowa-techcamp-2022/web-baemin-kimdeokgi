@@ -6,29 +6,38 @@ block head
 block content 
   div(class="container")
     img(class="cancel" src="/images/arrow-left.svg")
-    button(class="next") 완료
+    button(class="next", id="completeSignup") 완료
     h3(class="header") 회원가입
 
     div(class="title") 이메일
     div(class="input-wrapper check")
       span
-        input(type="email" name="email")
+        input(type="email" name="email" id="email")
         img(src="/images/validation-green.png")
         img(src="/images/cancel-circle.png")
-      button(class="verify") 중복
+      button(class="verify" id="verifyEmail") 중복
+    div(class="error-message", id="emailErrorMessage")
 
-    div(class="title") 닉네임
-    div(class="input-wrapper")
-      input(type="text" name="nickname")
-      img(src="/images/validation-green.png")
-      img(src="/images/cancel-circle.png")
-    div(class="title") 비밀번호
-    div(class="input-wrapper")
-      input(type="password" name="password")
-      img(src="/images/validation-green.png")
-      img(src="/images/cancel-circle.png")
-    div(class="title") 생년월일
-    div(class="input-wrapper")
-      input(type="text" name="birth")
-      img(src="/images/validation-green.png")
-      img(src="/images/cancel-circle.png")
+    section(class="user-info-container")
+      div(class="title") 닉네임
+      div(class="input-wrapper")
+        input(type="text" name="nickname" id="nickname" placeholder="예) crongcrong")
+        img(src="/images/validation-green.png")
+        img(src="/images/cancel-circle.png")
+      div(class="error-message", id="nicknameErrorMessage")
+
+      div(class="title") 비밀번호
+      div(class="input-wrapper")
+        input(type="password" name="password" id="pw")
+        img(src="/images/validation-green.png")
+        img(src="/images/cancel-circle.png")
+      div(class="error-message", id="pwErrorMessage")
+
+      div(class="title") 생년월일
+      div(class="input-wrapper")
+        input(type="text" name="birth" id="birth" placeholder="예) 2022.07.07" maxlength="10")
+        img(src="/images/validation-green.png")
+        img(src="/images/cancel-circle.png")
+      div(class="error-message", id="birthErrorMessage")
+
+  script(src="/javascripts/userInfo.js") 
