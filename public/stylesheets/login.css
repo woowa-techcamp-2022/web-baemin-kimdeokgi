@@ -67,3 +67,7 @@ p {
 form {
   width: 100%;
 }
+
+.signup {
+  cursor: pointer;
+}
