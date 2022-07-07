@@ -14,9 +14,9 @@ block content
       h3 어서오세요
       h3 약관 동의가 필요해요
 
-    div(class="terms-cb")
+    div(class="terms-cb" id='termsForm')
       div(class="checkbox-wrapper")
-        input(type="checkbox", id="termAll" name="agree-all")
+        input(type="checkbox", id="termAll" name="termAll")
         label(for="termAll") 전체 동의
       hr
       div(class="checkbox-wrapper")
@@ -36,7 +36,7 @@ block content
         label(for="term5") 마케팅 정보 메일, SMS 수신 동의 (선택)
       hr
       div(class="radio-wrapper")
-        input(type="radio", id="age1" name="age")
+        input(type="radio", id="age1" name="age" checked)
         label(for="age1") 만 14세 이상입니다.
         img(src="/images/adult.png")
       div(class="radio-wrapper")
@@ -47,8 +47,8 @@ block content
             p(class="text-sm") 본인확인이 된 보호자 배민 계정이 필요해요.
         img(src="/images/child.png")
 
-    button(id="next" class="btn-100" type="button") 다음으로
+    button(id="next" class="btn-100" type="button" disabled) 다음으로
       
       
-
+  script(src="/javascripts/terms.js") 
 
