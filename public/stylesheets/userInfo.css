@@ -69,3 +69,15 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+.user-info-container {
+  display: none;
+}
+
+.error-message {
+  height: 1rem;
+  color: red;
+  margin: 0.25rem;
+  padding: 0;
+  font-size: 0.5rem;
+}
