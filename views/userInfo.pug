@@ -1,0 +1,34 @@
+extends layout 
+
+block head 
+  link(rel="stylesheet", href="/stylesheets/userInfo.css")
+
+block content 
+  div(class="container")
+    img(class="cancel" src="/images/arrow-left.svg")
+    button(class="next") 완료
+    h3(class="header") 회원가입
+
+    div(class="title") 이메일
+    div(class="input-wrapper check")
+      span
+        input(type="email" name="email")
+        img(src="/images/validation-green.png")
+        img(src="/images/cancel-circle.png")
+      button(class="verify") 중복
+
+    div(class="title") 닉네임
+    div(class="input-wrapper")
+      input(type="text" name="nickname")
+      img(src="/images/validation-green.png")
+      img(src="/images/cancel-circle.png")
+    div(class="title") 비밀번호
+    div(class="input-wrapper")
+      input(type="password" name="password")
+      img(src="/images/validation-green.png")
+      img(src="/images/cancel-circle.png")
+    div(class="title") 생년월일
+    div(class="input-wrapper")
+      input(type="text" name="birth")
+      img(src="/images/validation-green.png")
+      img(src="/images/cancel-circle.png")
