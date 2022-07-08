@@ -1,17 +1,5 @@
 
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-/* p {
-  display: inline;
-} */
 
 nav {
   height: 50px;
@@ -22,7 +10,7 @@ nav {
 }
 
 .container {
-  width: 500px;
+  width: 400px;
   border: 1px solid orange;
   display: flex;
   flex-direction: column;
@@ -41,31 +29,52 @@ nav {
 .loginContainer {
   /* border: 1px solid gray; */
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loginContainer a {
+  display: flex;
+  align-items: center;
 }
 
 .menuContainer {
-  /* border: 1px solid yellow; */
   width: 100%;
   display: flex;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 .campContainer {
-  /* border: 1px solid yellow; */
   width: 100%;
-  /* height: 50px; */
-  border-bottom: 1px solid gray;
-  
+  border-bottom: 0.75rem solid gray;
+  border-top: 0.75rem solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.campContainer div {
+  display: flex;
+  align-items: center;
+}
+
 .menuContainer2 {
   /* border: 1px solid yellow; */
   width: 100%;
   /* height: 50px; */
   border-bottom: 0.5px solid gray;
+  display: flex;
+  justify-content: space-between;
 }
 
-.image {
-  width: 100%;
+.menuContainer2 img {
+  width: 2rem;
+}
+
+.menuContainer2 div {
+  margin: auto 0.5rem;
 }
 
 .image-user {
@@ -86,9 +95,24 @@ nav {
 .image-menu {
   margin: 0.5rem;
   width: 33%;
+  height: 3rem;
 }
 
 .image-root {
   width: 8%;
   margin: 0.5rem;
+}
+
+.loginContainer a {
+  display: flex;
+  align-items: center;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.arrow-right {
+  margin: auto 1rem;
+
 }
