@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "email": "1",
+      "nickname": "김덕기",
+      "password": "1",
+      "birth": "2022.02.02"
+    }
+  ]
+}

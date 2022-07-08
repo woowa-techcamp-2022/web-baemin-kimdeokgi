@@ -99,7 +99,8 @@ $birthInput.addEventListener('input', (e) => setDot(e.target))
 
 const completeSignup = () => {
   if (validateEmail($emailInput.value) && validatePw($pwInput.value) && validateBirth($birthInput.value) && $nicknameInput.value.trim()) {
-    location.href = '/login';
+    document.querySelector('#signupForm').submit();
+    
   }
 }
 

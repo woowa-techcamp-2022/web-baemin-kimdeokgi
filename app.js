@@ -1,15 +1,25 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import session from "express-session";
+import bodyParser from 'body-parser';
+import logger from 'morgan';
+// import FileStore from 'session-file-store';
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-const loginRouter = require('./routes/login');
-const termsRouter = require('./routes/terms');
-const authPhoneRouter = require('./routes/authPhone');
-const userInfoRouter = require('./routes/userInfo');
+import indexRouter from './routes/index.js';
+import usersRouter from './routes/users.js';
+import loginRouter from './routes/login.js';
+import termsRouter from './routes/terms.js';
+import authPhoneRouter from './routes/authPhone.js';
+import userInfoRouter from './routes/userInfo.js';
+import signupRouter from './routes/signup.js';
+
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 var app = express();
 
@@ -23,12 +33,27 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 세션 세팅
+app.use(
+  session({
+    secret: "web_baemin_kimdeokgi",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      httpOnly: true,
+    },
+    // store: new FileStore()(session),
+  })
+)
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/terms', termsRouter);
 app.use('/authPhone', authPhoneRouter);
 app.use('/userInfo', userInfoRouter);
+app.use('/signup', signupRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,4 +71,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log('START APP PORT: ', PORT)
+})
+
+export default app;
