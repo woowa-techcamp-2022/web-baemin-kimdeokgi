@@ -21,3 +21,8 @@ https://web-baemin-kimdeokgi.herokuapp.com/
 - 중복되는 코드 하나로 합치기(css, js)
 - 회원가입하는 부분 spa로 만들기
 - 파일 잘 나누기
+
+### 추가
+- 로그아웃
+- 메인 페이지에 ㅁㅁ님 환영합니다
+- 
