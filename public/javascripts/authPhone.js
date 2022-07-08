@@ -1,6 +1,7 @@
 const $phoneNumberInput = document.querySelector('input[name=phone]');
 const $getAuthNumberBtn = document.querySelector('.get-auth-number');
 const $authNumber = document.querySelector('input[name=authNumber]');
+const $cancelBtn = document.querySelector('#cancel');
 
 const toggleGetAuthNumberBtn = (status) => {
   $getAuthNumberBtn.disabled = !status;
@@ -75,7 +76,6 @@ $getAuthNumberBtn.addEventListener('click', getAuthNumber)
 document.querySelector('#refetchAuthNumber').addEventListener('click', getAuthNumber)
 
 const validationAuthNumber = () => {
-  console.log($authNumber)
   return $authNumber.value.length === 4
 }
 
@@ -87,3 +87,7 @@ const moveNext = () => {
 
 const $nextBtn = document.querySelector('.next');
 $nextBtn.addEventListener('click', moveNext)
+
+$cancelBtn.addEventListener('click', () => {
+  location.href = '/';
+})

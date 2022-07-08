@@ -15,10 +15,8 @@ db.data ||= { users: []}
 
 /* GET home page. */
 router.post('/', async function(req, res, next) {
-	console.log(db)
 	db.data.users.push({...req.body});
 	await db.write();
-	console.log(db);
 	res.redirect('/');
 });
 

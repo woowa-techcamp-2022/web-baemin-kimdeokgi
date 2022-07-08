@@ -1,5 +1,6 @@
 const $termAll = document.querySelector('#termAll');
 const $nextBtn = document.querySelector('#next');
+const $cancelBtn = document.querySelector('#cancel');
 
 const validationTerms = () => {
   const term_agree_count = [1,2,3].filter(idx => document.querySelector(`#term${idx}`).checked).length;
@@ -32,4 +33,8 @@ $termsForm.addEventListener('change', e => {
 
 $nextBtn.addEventListener('click', () => {
   location.href = '/authPhone';
+})
+
+$cancelBtn.addEventListener('click', () => {
+  location.href = '/'
 })

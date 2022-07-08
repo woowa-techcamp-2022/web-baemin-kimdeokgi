@@ -5,6 +5,18 @@
       "nickname": "김덕기",
       "password": "1",
       "birth": "2022.02.02"
+    },
+    {
+      "email": "camp_supa-developer@woowafriends.com",
+      "nickname": "김덕기2",
+      "password": "1q2w3e4r5t",
+      "birth": "1999.01.01"
+    },
+    {
+      "email": "camp_supa-developer2@woowafriends.com",
+      "nickname": "3번쨰 회원가입",
+      "password": "1q2w3e4r5t",
+      "birth": ""
     }
   ]
 }

@@ -6,7 +6,7 @@ import { v4 } from 'uuid';
 var router = express.Router();
 
 const cookieConfig = {
-  httpOnly: true,
+  // httpOnly: true,
   maxAge: 1000000,
   signed: false
 }
@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
   if (req.session.loggedIn && req.session.loggedIn[token]) {
     res.redirect('/');
   } else {
-    res.render('login', {title: 'Login'});
+    res.render('login', {title: '배달의민족 - 로그인'});
   }
 });
 
