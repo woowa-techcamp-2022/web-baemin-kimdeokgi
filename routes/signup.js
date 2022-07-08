@@ -10,13 +10,15 @@ const __dirname = path.dirname(path.basename(__filename));
 const file = path.join(__dirname, 'db', 'db.json');
 const adapter = new JSONFile(file);
 const db = new Low(adapter);
+await db.read();
 db.data ||= { users: []}
+
 /* GET home page. */
 router.post('/', async function(req, res, next) {
-	console.log(req.body);
-	console.log(db);
+	console.log(db)
 	db.data.users.push({...req.body});
 	await db.write();
+	console.log(db);
 	res.redirect('/');
 });
 
