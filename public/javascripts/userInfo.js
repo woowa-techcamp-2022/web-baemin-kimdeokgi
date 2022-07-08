@@ -2,6 +2,7 @@ const $emailInput = document.querySelector('#email');
 const $pwInput = document.querySelector('#pw');
 const $birthInput = document.querySelector('#birth');
 const $nicknameInput = document.querySelector('#nickname');
+const $cancelBtn = document.querySelector('#cancel');
 
 const $validateEmailBtn = document.querySelector('#verifyEmail');
 const $completeSignupBtn = document.querySelector('#completeSignup');
@@ -14,7 +15,6 @@ const $birthErrorEl = document.querySelector('#birthErrorMessage');
 
 const validateEmail = (email) => {
   const pattern = new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/);
-  console.log('email v: ',pattern.test(email));
   return pattern.test(email);
 }
 
@@ -104,4 +104,8 @@ const completeSignup = () => {
   }
 }
 
-$completeSignupBtn.addEventListener('click', completeSignup)
+$completeSignupBtn.addEventListener('click', completeSignup);
+
+$cancelBtn.addEventListener('click', () => {
+  location.href = '/';
+})

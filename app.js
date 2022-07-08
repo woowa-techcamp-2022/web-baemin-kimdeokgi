@@ -39,9 +39,9 @@ app.use(
     secret: "web_baemin_kimdeokgi",
     resave: false,
     saveUninitialized: true,
-    cookie: {
-      httpOnly: true,
-    },
+    // cookie: {
+    //   httpOnly: true,
+    // },
     // store: new FileStore()(session),
   })
 )
