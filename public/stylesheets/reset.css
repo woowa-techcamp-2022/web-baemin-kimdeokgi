@@ -46,6 +46,10 @@ table {
 a {color: #000; text-decoration: none; outline: none}
 a:hover, a:active {text-decoration: none; color:rgb(116, 96, 96); background-color: #fff;}
 
+input {
+	border: none;
+}
+
 input[type="password"],
 input[type="text"]:focus {
 	outline: none;
