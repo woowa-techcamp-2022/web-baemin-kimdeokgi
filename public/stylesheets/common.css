@@ -62,30 +62,30 @@
   text-align: end;
 }
 
-.pd1 {
+.p-1 {
   padding: 0.5rem;
 }
 
-.pd2 {
+.p-2 {
   padding: 1rem;
 }
 
-.pd1-x {
+.px-1 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.pdx-2 {
+.px-2 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.pd1-y {
+.py-1 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.pd1-bt {
+.p-1-bt {
   padding: 0 0 0.5rem 0;
 }
 
