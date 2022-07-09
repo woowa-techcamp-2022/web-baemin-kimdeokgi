@@ -17,6 +17,7 @@ import signupRouter from './routes/signup.js';
 
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
+
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -71,7 +72,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
+// 포트 고정시 헤로쿠 에러
 app.listen(PORT, () => {
   console.log('START APP PORT: ', PORT)
 })

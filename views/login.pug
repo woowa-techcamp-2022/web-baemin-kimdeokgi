@@ -4,34 +4,37 @@ block head
   link(rel='stylesheet', href='/stylesheets/login.css')
 
 block content
-  div(class="container")
-
-    div(class="form-container")
-      form(action="/login", method="post" id="loginForm") 
-        input(id="id" type="text", name="id" placeholder="아이디 또는 이메일")
-        div(class="error-message", id="idErrorMessage") 
-        input(id="pw" type="password" name="pw" placeholder="비밀번호")
-        div(class="error-message" id="pwErrorMessage") 
-        button(id="login" class="login btn-100" type="submit") 로그인
-        span(class="btn-finder-user-info")
-          a(id="btnFindId") 아이디 찾기 | 
-          a(id="btnFindPw")  비밀번호 찾기
-
-    div(class="social-login-container")
-      button(class="social-login-btn btn-100")
-        span
-        img(class="social-login-img" src="/images/facebook.png")
+  img(class="cancel" src="/images/cancel.png", alt="닫기")
+  section(style={"height": "100%"})
+    section(class="flex-column pd2")
+      div(class="pd2")
+        div(class="input-wrapper")
+          input(class="text-lg" placeholder="아이디 또는 이메일" type="text")
+        span(class="text-error") 올바른 아이디 또는 이메일을 입력해주세요.
+      div(class="pd2")
+        div(class="input-wrapper")
+          input(class="text-lg" placeholder="비밀번호" type="password")
+        span(class="text-error") 올바른 비밀번호를 입력해주세요.
+      div(class="pd2")
+        button(class="pd2 btn-100 login text-lg") 로그인
+      div(class="pd2 flex-center")
+        span(class="text-sub") 아이디 찾기 | 비밀번호 찾기
+  
+  footer(class="flex-column pd2")
+    div(class="pdx-2 pd1-y")
+      button(class="flex-center pd1 social-login btn-100")
+        img(src="/images/facebook.png")
         span 페이스북으로 로그인
-      button(class="social-login-btn btn-100")
-        span
-        img(class="social-login-img" src="/images/naver.png")
+    div(class="pdx-2 pd1-y")
+      button(class="flex-center pd1 social-login btn-100")
+        img(src="/images/naver.png")
         span 네이버로 로그인
-      button(class="social-login-btn btn-100")
-        span
-        img(class="social-login-img" src="/images/apple.png")
-        span Apple으로 로그인
-
-      p 혹시, 배달의민족이 처음이신가요?
-      a(class='signup' id='signup' href='/terms') 회원가입
+    div(class="pdx-2 pd1-y")
+      button(class="flex-center pd1 social-login btn-100")
+        img(src="/images/apple.png")
+        span Apple로 로그인
+    span(class="pdx-2 pd1-y flex-center text-md")
+      p() 혹시, 배달의민족이 처음이신가요? 
+        a(class='text-sub' id='signup' href='/terms') 회원가입
 
   script(src="/javascripts/login.js") 
