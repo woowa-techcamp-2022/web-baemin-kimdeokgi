@@ -1,60 +1,74 @@
 extends layout
 
 block head 
-  link(rel='stylesheet', href='/stylesheets/style.css')
+  //- link(rel="stylesheet", href="/stylesheets/style.css")
+  link(rel="stylesheet", href="/stylesheets/index.css")
 
 block content
-  div(class="container")
-    nav
-    p(class="title") My배민
-    div(class="banner")
-      img(class="banner-img" src='/images/banner.png')
-    div(class="loginContainer" id="login")
-      a(href="/login")
-        img(class="image-user" src='/images/user.png')
-        p(class="text-md") 로그인해주세요
-      p(class="arrow-right") &gt
-    div(class="menuContainer")
-      div(class="menu")
-        img(class="image-menu" src='/images/point.png')
-        | 포인트
-      div(class="menu")
-        img(class="image-menu" src='/images/coupon.png')
-        | 쿠폰함
-      div(class="menu")
-        img(class="image-menu" src='/images/present.png')
-        | 선물함
-      div(class="menu")
-        img(class="image-menu" src='/images/cart.png')
-        | 찜
-      div(class="menu")
-        img(class="image-menu" src='/images/order.png')
-        | 주문내역
-      div(class="menu")
-        img(class="image-menu" src='/images/review.png')
-        | 리뷰관리
-    div(class="campContainer")
-      div
-        img(class="image-root" src='/images/root.png')
-        | 일회용품 덜 쓰기, 함께해요!
-      p(class="arrow-right") &gt
-    div(class="menuContainer2")
-      div 
-        span 배민페이 등록 NEW
-        img(class="image-new" src="/images/new.png")
-        p 베민페이로 결제하면 최대 5.5% 배민포인트가 적립됩니다!
-      p(class="arrow-right") &gt
-    div(class="menuContainer2")
-      div
-        sapn 가족계정 관리
-        img(class="image-new" src="/images/new.png")
-        p 결제수단을 공유해 우리 가족의 끼니를 챙겨주세요
-      p(class="arrow-right") &gt
-    div(class="menuContainer2")
-      div
-        p 공지사항
-      p(class="arrow-right") &gt
-    div(class="menuContainer2")
-      div
-        p 배민커넥트 지원
-      p(class="arrow-right") &gt
+
+  section(class="banner")
+    img(class="banner-img" src='/images/banner.png')
+
+  section(id="login")
+    a(href="/login" class="flex-space-between p-2")
+      span(class="flex-left")
+        img(class="user" src="/images/user.png")
+        span(class="text-xl text-sub p-1") 로그인해주세요
+      img(class="arrow-right" src="/images/arrow-right.png")
+  
+  section
+    ul(class="menu-list")
+      li(class="menu-wrapper")
+        img(class="menu" src="/images/point.png")
+        span(class="text-lg text-sub p-1") 포인트
+      li(class="menu-wrapper")
+        img(class="menu" src="/images/coupon.png")
+        span(class="text-lg text-sub p-1") 쿠폰함
+      li(class="menu-wrapper")
+        img(class="menu" src="/images/present.png")
+        span(class="text-lg text-sub p-1") 선물함
+      li(class="menu-wrapper")
+        img(class="menu" src="/images/cart.png")
+        span(class="text-lg text-sub p-1") 찜
+      li(class="menu-wrapper")
+        img(class="menu" src="/images/order.png")
+        span(class="text-lg text-sub p-1") 주문내역
+      li(class="menu-wrapper")
+        img(class="menu" src="/images/review.png")
+        span(class="text-lg text-sub p-1") 리뷰관리
+  
+  section
+    div(class="flex-space-between p-2 border-empty-space")
+      span(class="flex-left")
+        img(class="root" src="/images/root.png")
+        span(class="text-lg text-camp p-1") 일회용품 덜 쓰기, 함께해요!
+      img(class="arrow-right" src="/images/arrow-right.png")
+
+  section 
+    div(class="flex-space-between p-2 border-bt")
+      span(class="flex-column")
+        span(class="p-1-bt flex-align-middle")
+          span(class="text-md") 배민페이 등록
+          img(class="new p-1-x" src="/images/new.png")
+        span(class="text-md text-sub") 배민페이로 결제하면 최대 5.5% 배민포인트가 적립됩니다!
+      img(class="arrow-right" src="/images/arrow-right.png")
+    div(class="flex-space-between p-2 border-bt")
+      span(class="flex-column")
+        span(class="p-1-bt flex-align-middle")
+          span(class="text-md") 가족계정 관리
+          img(class="new p-1-x" src="/images/new.png")
+        span(class="text-md text-sub") 결제수단을 공유해 우리 가족의 끼니를 챙겨주세요.
+      img(class="arrow-right" src="/images/arrow-right.png")
+    div(class="flex-space-between p-2 border-bt")
+      span(class="flex-column")
+        span(class="py-1 flex-align-middle")
+          span(class="text-md") 공지사항
+      img(class="arrow-right" src="/images/arrow-right.png")
+    div(class="flex-space-between p-2 border-bt")
+      span(class="flex-column")
+        span(class="py-1 flex-align-middle")
+          span(class="text-md") 배민커넥트
+      img(class="arrow-right" src="/images/arrow-right.png")
+    div(class="flex-space-between p-2")
+      span(class="flex-column")
+        span(class="py-1 flex-align-middle")

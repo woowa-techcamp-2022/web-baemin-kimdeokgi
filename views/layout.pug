@@ -1,9 +1,14 @@
 doctype html
 html
   head
-
     title= title
-    //- link(rel='stylesheet', href='/stylesheets/common.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel="stylesheet", href="/stylesheets/common.css")
     block head
   body
-    block content
+    div(class="body")
+      header(class="header") My 배민
+      block content
+
+
+    block script

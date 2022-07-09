@@ -16,20 +16,20 @@ const login = async (id, pw) => {
         },
         body: JSON.stringify({ id, pw }),
     });
-
-    if (res.status === 200) {
-        return true;
-    }
-    return false;
+    return res;
+    // if (res.status === 200) {
+    //     return true;
+    // }
+    // return false;
 
 }
 
-$loginForm.addEventListener('submit', (e) => {
+$loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const id = document.querySelector('input[name=id]').value;
     const pw = document.querySelector('input[name=pw]').value;
     if (validationLoginInfo(id) && validationLoginInfo(pw)) {
-        if (login(id, pw)) {
+        if (login(id, pw)) { // .then(res).catch(err)
             location.href = '/';
         } else {
             alert('SERVER ERROR');
